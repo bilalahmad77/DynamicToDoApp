@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DynamicToDoApp</title>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCVod07OtNE5r1tdZp9VU6WxMkgnr8FJrM",
+          authDomain: "dynamictodoapp.firebaseapp.com",
+          databaseURL: "https://dynamictodoapp.firebaseio.com",
+          projectId: "dynamictodoapp",
+          storageBucket: "dynamictodoapp.appspot.com",
+          messagingSenderId: "429093513231",
+          appId: "1:429093513231:web:bf840a290417a520811b7a",
+          measurementId: "G-1GEJZXTCGG"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        //firebase.analytics();
+      </script>
+
+</head>
+<body>
+<div>
+
+<table>
+  <h1>DynamicToDoApp</h1>
+  <tr>
+   <td>Task Id: </td>
+   <td><input type="text" name="id" id="task_id" /></td>
+  </tr>
+  <tr>
+   <td>Task Name: </td>
+   <td><input type="text" name="task_name" id="task_name" /></td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <input type="button" value="Save" onclick="save_task();" />
+    <input type="button" value="Update" onclick="update_task();" />
+    <input type="button" value="Delete" onclick="delete_task();" />
+    <input type="button" value="DeleteAll" onclick="delete_all_tasks();" />
+   </td>
+  </tr>
+  
+ </table>
+ Note: To Delete,Update task copy and paste Task id of desired row and paste in Task id text box<br> and for update type Task name (in task name textBox) which you want to update with Task id and press <br> the required button to delete or update.
+copy key from webpage and paste it in notepad to remove extra spaces<br> and then copy again from notepad and paste in task name text box to successfully delete/update tasks.
+ <h3>Tasks List</h3>
+ 
+ <table id="tbl_tasks_list" border="1">
+  <tr>
+   <td>Task ID</td>
+   <td>Task Name</td>
+  </tr>
+ </table>
+</div>
+    <script src = "app.js"></script>
+</body>
+</html>
